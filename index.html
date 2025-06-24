@@ -1,0 +1,410 @@
+<!-- y website :)
+tried to add animations & stuff to make it less boring -->
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Himani Musku</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-padding-top: 6rem;
+    }
+
+    @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 5rem;
+      }
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeScaleUp {
+      from { opacity: 0.5; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .animate-fade-scale {
+      animation: fadeScaleUp 1s ease forwards;
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    .fade-in-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 2s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .edu-logo {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
+      object-fit: contain;
+      border-radius: 0.25rem;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 font-fredoka">
+
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-bold text-teal-600">Himani Musku</h1>
+      <nav class="mt-2 sm:mt-0 space-x-2 sm:space-x-4 text-sm sm:text-base font-medium text-teal-700">
+        <a href="#about" class="block sm:inline hover:text-teal-500">About</a>
+        <a href="#education" class="block sm:inline hover:text-teal-500">Education</a>
+        <a href="#research" class="block sm:inline hover:text-teal-500">Research</a>
+        <a href="#awards" class="block sm:inline hover:text-teal-500">Awards</a>
+        <a href="#extracurriculars" class="block sm:inline hover:text-teal-500">Extracurriculars</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20 text-center">
+    <section id="about" class="text-left max-w-3xl mx-auto mt-12">
+    <!-- About -->
+    <section id="about" class="text-left max-w-3xl mx-auto">
+      <div class="flex flex-col md:flex-row items-start md:items-center md:gap-12">
+        <img id="profile-pic"
+             src="main_pic.jpg"
+             alt="Himani Musku"
+             class="w-40 sm:w-52 md:w-64 lg:w-72 h-40 sm:h-52 md:h-64 lg:h-72 rounded-full object-cover border border-teal-500 shadow-lg md:-translate-y-6" />
+
+        <div class="md:text-left mt-8 md:mt-0 md:flex-1 space-y-4">
+          <h2 id="greeting" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-teal-600 slide-in-right">
+            Hi, I’m Himani!
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-gray-700 fade-in-scroll">
+            I'm an incoming freshman at <strong class="text-teal-600">Carnegie Mellon University</strong>, majoring in Computer Science. I'm passionate about Machine Learning and pushing the limits of what we know/use using AI. I have previously worked on AI research with mentors from the MIT Lincoln Laboratory, UChicago, and Northwestern for various applications, ranging from human-robot interactions to disease diagnosis. I always love a good challenge and am excited to keep exploring the possibilities this dynamic field offers. In my free time, I enjoy playing chess, dancing, or running.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm font-medium text-teal-600 fade-in-scroll">
+            <a href="mailto:hmusku@andrew.cmu.edu" class="hover:text-teal-700">✉️ hmusku@andrew.cmu.edu</a>
+            <a href="https://www.linkedin.com/in/himani-musku-55a60a286/" target="_blank" class="hover:text-teal-700 flex items-center gap-1">
+                <img src="linkedin.png" alt="LinkedIn" class="w-4 h-4 inline-block" />
+                LinkedIn
+              </a>
+            </div> 
+        </div>
+      </div>
+    </section>
+    </section>
+
+   <!-- Education -->
+<section id="education" class="fade-in-scroll text-left max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-teal-600 mb-6 text-center">Education</h2>
+    
+    <div class="mb-4 flex items-center gap-3">
+      <img class="w-8 h-8 rounded object-contain" src="cmu.png" alt="CMU logo" />
+      <div class="flex-1">
+        <p class="text-lg sm:text-xl font-semibold">
+          Carnegie Mellon University, <span class="font-normal">School of Computer Science</span>
+          <span class="block sm:inline float-right italic text-gray-500 text-sm sm:text-base">Aug 2025 – May 2029</span>
+        </p>
+      </div>
+    </div>
+  
+    <div class="mb-4 flex items-center gap-3">
+      <img class="w-8 h-8 rounded object-contain" src="imsa.jpg" alt="IMSA logo" />
+      <div class="flex-1">
+        <p class="text-lg sm:text-xl font-semibold">
+          Illinois Mathematics and Science Academy <span class="font-normal">(GPA: 4.0)</span>
+          <span class="block sm:inline float-right italic text-gray-500 text-sm sm:text-base">Aug 2022 – May 2025</span>
+        </p>
+      </div>
+    </div>
+  
+    <div class="mt-4 text-gray-600 italic">
+      <strong>Relevant Coursework:</strong>
+      <ul class="list-disc list-inside">
+        <li>Advanced Programming</li>
+        <li>Machine Learning</li>
+        <li>UNIX/Linux and Cybersecurity</li>
+        <li>Microcontroller Applications</li>
+        <li>Object-Oriented Programming</li>
+        <li>Linear Algebra</li>
+        <li>Multivariable Calculus</li>
+        <li>Differential Equations</li>
+        <li>BC Calculus</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <!-- Research -->
+  <section id="research" class="fade-in-scroll text-left max-w-4xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-teal-600 mb-10 text-center">Research</h2>
+  
+    <div class="flex items-center gap-2 mb-4">
+      <img src="mit_logo.png" alt="MIT Logo" class="w-6 h-6 object-contain" />
+      <h3 class="text-xl sm:text-2xl font-bold text-teal-600">MIT Lincoln Laboratory</h3>
+    </div>
+  
+    <div class="flex flex-col md:flex-row items-start gap-6 mb-10">
+      <div class="flex-shrink-0 w-48">
+        <img src="MIT2.png" alt="MIT NLP Project" class="h-48 w-full object-contain rounded shadow-md" />
+      </div>
+      <div class="flex-grow">
+        <h4 class="font-bold text-base sm:text-lg">GEMNET and STACKNET: Detecting Expert-written Comments in StackExchange</h4>
+        <p class="italic text-gray-600">Aug 2024 – Present</p>
+        <ul class="list-disc pl-5 text-gray-800 text-sm sm:text-base mt-1">
+          <li>Tested the performance of 12 machine learning classifiers in accurately detecting expert comments on StackExchange</li>
+          <li>Developed GEMNET (transformer-based embeddings) and STACKNET (ensemble model)<i>(paper in progress)</i></li>
+        </ul>
+        <p class="mt-2 text-sm text-teal-600 underline">
+          <a href="mit2poster.pdf" target="_blank" rel="noopener noreferrer">
+            View poster
+          </a>
+        </p>
+      </div>
+    </div>
+  
+    <div class="flex flex-col md:flex-row-reverse items-start gap-6 mb-12">
+      <div class="flex-shrink-0 w-48">
+        <img src="MIT1.png" alt="MIT Social Media Analysis" class="h-48 w-full object-contain rounded shadow-md" />
+      </div>
+      <div class="flex-grow">
+        <h4 class="font-bold text-base sm:text-lg">Sentiment and Topic Modeling in Tweets and News Articles from the Russia-Ukraine War</h4>
+        <p class="italic text-gray-600">Aug 2023 – May 2024</p>
+        <ul class="list-disc pl-5 text-gray-800 text-sm sm:text-base mt-1">
+          <li>Trained a hashtag-prediction model to determine whether tweets were pro-Russia or pro-Ukraine</li>
+          <li>Utilized BERTopic to compute the most common topics of discussion for the tweets and news articles</li>
+          <li>Studied correlations between tweets’ political stance and sentiment by location</li>
+        </ul>
+        <p class="mt-2 text-sm text-teal-600 underline">
+          <a href="mit1poster.png" target="_blank" rel="noopener noreferrer">
+            View poster
+          </a>
+        </p>
+      </div>
+    </div>
+  
+  
+<div class="flex items-center gap-2 mb-4">
+  <img src="uchicago_logo.webp" alt="UChicago Logo" class="w-6 h-6 object-contain" />
+  <h3 class="text-xl sm:text-2xl font-bold text-teal-600">University of Chicago, Human-Robot Interaction Lab</h3>
+</div>
+
+<div class="flex flex-col md:flex-row items-start gap-6 mb-12">
+  <div class="flex-shrink-0 w-48">
+    <img src="UChicago.png" alt="UChicago Research" class="h-48 w-full object-contain rounded shadow-md" />
+  </div>
+  <div class="flex-grow">
+    <p class="italic text-gray-600">Jun 2024 – Aug 2024</p>
+    <ul class="list-disc pl-5 text-gray-800 text-sm sm:text-base mt-1">
+      <li>Selected for UChicago Data Science Institute Summer Lab Program (1 out of 4 highschoolers, rest undergrads)</li>
+      <li>Programmed robots to teach social-emotional learning (SEL) to elementary students; conducted 2 pilot tests</li>
+      <li>Integrated speech-to-text, LLMs, and AI facial expressions for seamless child-robot interactions</li>
+    </ul>
+    <p class="mt-2 text-sm text-teal-600 underline">
+      <a href="https://datascience.uchicago.edu/people/himani-musku-she-her/" target="_blank" rel="noopener noreferrer">
+        View poster and symposium video
+      </a>
+    </p>
+  </div>
+</div>
+
+  
+    <div class="flex items-center gap-2 mb-4">
+      <img src="northwestern_logo.png" alt="Northwestern Logo" class="w-6 h-6 object-contain" />
+      <h3 class="text-xl sm:text-2xl font-bold text-teal-600">Northwestern University, Winter Lab of Functional Genomics</h3>
+    </div>
+  
+    <div class="flex flex-col md:flex-row-reverse items-start gap-6 mb-12">
+      <div class="flex-shrink-0 w-48">
+        <img src="Northwestern.png" alt="Northwestern Research" class="h-48 w-full object-contain rounded shadow-md" />
+      </div>
+      <div class="flex-grow">
+        <p class="italic text-gray-600">Jun 2023 – Aug 2023</p>
+        <ul class="list-disc pl-5 text-gray-800 text-sm sm:text-base mt-1">
+          <li>Trained machine learning models in R to accurately classify esophageal disease in single-cell data</li>
+          <li>Compared dimensionality reduction techniques, such as UMAP, PCA, and t-SNE, and utilized other pre-processing methods to clean dataset</li>
+          <li>Created a user interface to assist with visualization of our data and results and presented it to three Northwestern labs</li>
+        </ul>
+      </div>
+    </div>
+
+  
+      <div class="flex items-center gap-2 mb-2">
+        <h3 class="text-lg font-semibold text-teal-600">Presentations</h3>
+      </div>
+      <ul class="list-disc pl-5 space-y-2 text-gray-800 text-sm sm:text-base">
+        <li>
+          <strong>2024 International Mathematics and Statistics Student Research Symposium</strong> – Presented MIT research
+          <ul class="list-disc pl-5 text-sm text-gray-600">
+            <li>Received $260 in funding from the National Science Foundation</li>
+          </ul>
+        </li>
+        <li>
+          <strong>23rd Annual High School Research Symposium</strong> – Presented MIT research
+        </li>
+      </ul>
+    </section>
+      
+    <section id="awards" class="fade-in-scroll text-left max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-teal-600 mb-6 text-center">Awards & Certifications</h2>
+      <ul class="list-disc pl-5 text-gray-800 text-sm sm:text-base">
+        <li>Carson Scholar  (One student nominated to apply per school nationwide) <i> - Mar 2024 </i> </li>
+        <li>American Computer Science League (ACSL) 2X Finalist <i> – May 2023–24</i></li>
+        <li>Trig-Star Math Competition, State Winner and 4th in Nation <i> – Aug 2022</i></li>
+        <li>National Merit Finalist <i>– Feb 2025</i></li>
+        <li>President’s Volunteer Service Award (PVSA), GOLD <i>– Aug 2022</i></li>
+        <li>All-Girls National Chess Championships, Top 10 Under Age 16 (1st in state) <i>– Apr 2023 </i>  </li>
+        <li>National InspirASIAN Scholar <i>– Apr 2025</i> </li>
+        <li>FBLA (Future Business Leaders of America) Nationals, 6th Place for Elevator Speech <i>– Jun 2020</i></li>
+        <li>Certified Associate in Python Programming <i> – Jul 2020</i></li>
+      </ul>
+    </section>
+
+    <section id="extracurriculars" class="fade-in-scroll text-left max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-teal-600 mb-6 text-center">
+        Extracurriculars
+      </h2>
+    
+      <i><h3 class="text-xl font-bold text-teal-700 mt-8 mb-3">Leadership &amp; Community Service</h3> </i>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold text-teal-600">Cyrion Labs – Chief Operating Officer (COO)</h4>
+          <p class="italic text-gray-500 text-xs">Apr 2025 – Present</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Provide research opportunities for high school and college students and help with publishing their work in top-tier AI conferences and journals</li>
+            <li>Lead the recruitment process and select new student researchers to join our existing projects </li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">North South Foundation Junior Board – Executive Manager (Co-Founder)</h4>
+          <p class="italic text-gray-500 text-xs">Feb 2023 – Present</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Helped create the Junior Board to bridge 4,000+ youth volunteers and admins</li>
+            <li>Oversee our two committees and lead various youth-led initiatives & networking events</li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">Little League Coding IL Chapter – Logistics Director</h4>
+          <p class="italic text-gray-500 text-xs">Feb 2024 – Mar 2025</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>In charge of sponsorships and organizing our STEM fair held in Chicago and monthly initiatives at local libraries 
+            </li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">Kitchen Volunteer – Balaji Temple</h4>
+          <p class="italic text-gray-500 text-xs">May 2025 – Present</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Assist weekly in the temple kitchen, serving different types of Indian food to temple devotees</li>
+          </ul>
+        </div>
+      </div>
+      <i><h3 class="text-xl font-bold text-teal-700 mt-10 mb-3">School Activities</h3> </i>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold text-teal-600">Society of Women Engineers (SWE) – Co-President</h4>
+          <p class="italic text-gray-500 text-xs">Aug 2023 – May 2025</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Hosted virtual classes for schools in Africa & India as well as engineering panels/events at IMSA</li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">Chess Team – Co-Captain</h4>
+          <p class="italic text-gray-500 text-xs">Aug 2021 – Mar 2025</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>4× Sectional Champions (2022–25) & tied for 2nd in State (2025)</li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">TEDxYouth@IMSA – Speaker Coach</h4>
+          <p class="italic text-gray-500 text-xs">Mar 2024 – Apr 2025</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Coached student speakers for our annual event (~100 attendees)</li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="font-semibold text-teal-600">School Ambassador & Residential Student Leader</h4>
+          <p class="italic text-gray-500 text-xs">Sep 2022 – May 2024</p>
+          <ul class="list-disc list-inside text-sm mt-1">
+            <li>Gave campus tours to prospective IMSA families and organized social activities to improve peer bonding 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+  </main>
+
+  <!--animations (no one likes a boring website)--> 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pic = document.getElementById('profile-pic');
+      const greeting = document.getElementById('greeting');
+      const aboutFadeEls = document.querySelectorAll('#about .fade-in-scroll');
+      const educationSection = document.getElementById('education');
+
+      pic.classList.add('animate-fade-scale');
+      greeting.style.animation = 'slideInRight 0.8s forwards';
+
+      greeting.addEventListener('animationend', () => {
+        // Animate About fade-ins in sequence
+        aboutFadeEls.forEach((el, i) => {
+          setTimeout(() => el.classList.add('visible'), i * 1000);
+        });
+        const totalAboutFadeDuration = aboutFadeEls.length * 1000 - 500; 
+        setTimeout(() => {
+          educationSection.classList.add('visible');
+        }, totalAboutFadeDuration);
+      });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in-scroll').forEach(el => {
+        if (!el.closest('#about') && el.id !== 'education') {
+          observer.observe(el);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
